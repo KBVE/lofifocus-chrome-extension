@@ -27,10 +27,12 @@ jobs:
           cache: "pnpm"
       - name: Build and package the extension into a zip artifact
         run: pnpm package
+      - name: Prepare Release Tag
+        run: echo "RELEASE_TAG=$(date +'%Y%m%d%H%M%S')" > $GITHUB_ENV
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
+          tag_name: ${{ env.RELEASE_TAG }}
           files: /build/lofifocus.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
