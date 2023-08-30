@@ -1,4 +1,4 @@
-# LofiFocus Chrome Extension - Audiocraft Hackathon
+# Lofi Focus Chrome Extension - Audiocraft Hackathon
 
 Lofi Focus is a chrome extension that automatically generates lo-fi music when browsing articles, blogs, and other text-heavy sites. The ambient, chilled-out sounds create an enjoyable atmosphere to help users focus while reading.
 
