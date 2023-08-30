@@ -1,4 +1,4 @@
-name: "Create Release"
+name: "Create Holy Release for PepeJesus"
 on: 
   push:
     branches:
@@ -27,16 +27,18 @@ jobs:
           cache: "pnpm"
       - name: Build and package the extension into a zip artifact
         run: pnpm package
-      - name: Prepare Release Tag
-        run: echo "RELEASE_TAG=$(date +'%Y%m%d%H%M%S')" > $GITHUB_ENV
+      - name: Generate release tag
+        id: tag
+        run: |
+          echo "::set-output name=release_tag::UserBuild_$(date +"%Y.%m.%d_%H-%M")"
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ env.RELEASE_TAG }}
+          tag_name: ${{ steps.tag.outputs.release_tag }}
           files: /build/lofifocus.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
       # - name: Browser Platform Publish
       #   uses: PlasmoHQ/bpp@v3
       #   with:
