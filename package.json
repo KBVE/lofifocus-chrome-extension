@@ -1,7 +1,7 @@
 {
   "name": "lofi-focus",
   "displayName": "Lofi Focus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lofi Focus is a chrome extension that automatically generates lo-fi music when browsing articles, blogs, and other text-heavy sites. The ambient, chilled-out sounds create an enjoyable atmosphere to help users focus while reading.",
   "author": "kbve.com",
   "scripts": {

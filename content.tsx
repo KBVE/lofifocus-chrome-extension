@@ -1,6 +1,6 @@
 import { useMessage } from "@plasmohq/messaging/hook"
 import React from "react";
-import loadingSpeech from "url:~assets/loading-speech.wav"
+import loadingSpeech from "url:~assets/loading-speech-2.wav"
 import type { PlasmoCSConfig, PlasmoGetInlineAnchor, PlasmoMountShadowHost } from "plasmo";
 
 export const config: PlasmoCSConfig = {
