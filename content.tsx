@@ -33,6 +33,8 @@ const Play = () => {
                 // @ts-ignore
                 audioRef.current.load()
                 // @ts-ignore
+                audioRef.current.volume = .5
+                // @ts-ignore
                 audioRef.current.play()
             }
 
