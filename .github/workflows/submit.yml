@@ -33,7 +33,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.RELEASE_TAG }}
-          files: /build/lofifocus.zip
+          files: build/lofifocus.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
